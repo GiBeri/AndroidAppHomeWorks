@@ -8,33 +8,24 @@
     android:layout_margin="25dp"
     tools:context=".MainActivity2">
 
-    <ImageView
-        android:id="@+id/Circle"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="120dp"
-        app:srcCompat="@drawable/baseline_circle_24" />
-
     <TextView
         android:id="@+id/TextView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/Circle"
-        app:layout_constraintStart_toStartOf="@id/Circle"
-        app:layout_constraintEnd_toEndOf="@id/Circle"
-        app:layout_constraintBottom_toBottomOf="@id/Circle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
         android:text="0"
         android:textSize="40sp"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:background="@drawable/custom_background"/>
 
     <TextView
         android:id="@+id/TextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/Circle"
+        app:layout_constraintTop_toBottomOf="@id/TextView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="35dp"
@@ -50,6 +41,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="15dp"
-        android:text="Click" />
+        android:text="Click"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

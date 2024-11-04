@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val inputText = enterNameInput.text.toString()
             if (inputText == ""){
                 nameOutput.text = "Hello!"
-                Toast.makeText(this, "Enter Name!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Enter your Name!", Toast.LENGTH_SHORT).show()
             }
             else {
                 nameOutput.text = "Hello, " + inputText + "!"
@@ -40,8 +40,14 @@ class MainActivity : AppCompatActivity() {
 
         val nextButton = findViewById<Button>(R.id.NextBtn)
         nextButton.setOnClickListener {
-            val Intent = Intent(this, MainActivity2::class.java)
-            startActivity(Intent)
+            val inputText = enterNameInput.text.toString()
+            if (inputText != "") {
+                val Intent = Intent(this, MainActivity2::class.java)
+                startActivity(Intent)
+            }
+            else {
+                Toast.makeText(this, "Enter your Name first!", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
